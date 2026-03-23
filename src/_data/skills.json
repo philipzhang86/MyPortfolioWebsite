@@ -13,8 +13,7 @@
     "category": "Systems & Low-Level",
     "items": [
       {"name": "Linux", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"},
-      {"name": "gRPC", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg"},
-      {"name": "Protocol Buffers", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/protobuf/protobuf-original.svg"}
+      {"name": "gRPC", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/grpc/grpc-original.svg"}
     ]
   },
   {

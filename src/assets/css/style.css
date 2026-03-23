@@ -4,7 +4,9 @@
    ======================================== */
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -101,8 +103,6 @@ a:hover {
 }
 
 .social-links a {
-  color: #636E72;
-  transition: color 0.2s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,13 +110,29 @@ a:hover {
   height: 40px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .social-links a:hover {
-  color: #6C5CE7;
   transform: translateY(-2px);
   background: #fff;
-  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Permanent brand colors for social icons — override global a:hover */
+.social-github,
+.social-github:hover {
+  color: #181717;
+}
+
+.social-linkedin,
+.social-linkedin:hover {
+  color: #0A66C2;
+}
+
+.social-email,
+.social-email:hover {
+  color: #EA4335;
 }
 
 /* Navigation */
@@ -172,7 +188,7 @@ a:hover {
 
 /* Sections */
 .section {
-  margin-bottom: 4rem;
+  margin-bottom: 1.75rem;
 }
 
 .section-title {
@@ -429,7 +445,8 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
-.post-content ul, .post-content ol {
+.post-content ul,
+.post-content ol {
   margin-bottom: 1.25rem;
   padding-left: 1.5rem;
 }
@@ -493,11 +510,24 @@ a:hover {
   gap: 0.6rem;
   font-size: 0.95rem;
   color: #636E72;
-  transition: color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .contact-link:hover {
-  color: #6C5CE7;
+  transform: translateY(-2px);
+}
+
+/* Permanent brand colors for contact icons */
+.contact-email svg {
+  color: #EA4335;
+}
+
+.contact-github svg {
+  color: #181717;
+}
+
+.contact-linkedin svg {
+  color: #0A66C2;
 }
 
 .contact-link svg {
