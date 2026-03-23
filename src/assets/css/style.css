@@ -40,6 +40,8 @@ a:hover {
 .site-wrapper {
   display: flex;
   min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Sidebar */
@@ -164,8 +166,8 @@ a:hover {
 
 .main-content {
   flex: 1;
-  padding: 3rem 4rem;
-  max-width: 960px;
+  padding: 3rem 3rem;
+  max-width: 1400px;
 }
 
 /* Sections */
@@ -205,14 +207,21 @@ a:hover {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Scale up to 4 columns on very wide screens, but no more */
+@media (min-width: 1400px) {
+  .project-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .project-card {
   background: #fff;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid #EDEAE5;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -275,15 +284,21 @@ a:hover {
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (min-width: 1400px) {
+  .blog-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .blog-card {
   display: block;
   background: #fff;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1.75rem;
   border: 1px solid #EDEAE5;
   color: #2D3436;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -543,9 +558,15 @@ a:hover {
   .blog-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  .post-header h1 {
-    font-size: 1.6rem;
+@media (min-width: 769px) and (max-width: 1099px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
