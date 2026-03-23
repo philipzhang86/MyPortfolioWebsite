@@ -17,6 +17,28 @@ title: Philip Zhang — Backend + Systems + AI
   </p>
 </section>
 
+<!-- Tech Stack Section -->
+<section class="section" id="skills">
+  <h2 class="section-title">Tech Stack</h2>
+  <div class="skills-section">
+    {% for group in skills %}
+    <div class="skill-group">
+      <span class="skill-category">{{ group.category }}</span>
+      <div class="skill-items">
+        {% for item in group.items %}
+        <span class="skill-badge">
+          {% if item.icon %}
+          <img src="{{ item.icon }}" alt="{{ item.name }}" width="18" height="18">
+          {% endif %}
+          {{ item.name }}
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
 <!-- Projects Section -->
 <section class="section" id="projects">
   <h2 class="section-title">Projects</h2>
