@@ -1,0 +1,560 @@
+/* ========================================
+   Philip Zhang — Portfolio
+   Theme: Fresh, bright, comfortable
+   ======================================== */
+
+/* Reset & Base */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #2D3436;
+  background: #FAFAF8;
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #6C5CE7;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #5A4BD1;
+}
+
+/* ========================================
+   Layout: Sidebar + Main
+   ======================================== */
+
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #F5F3EF;
+  border-right: 1px solid #E8E5E0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar-content {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Avatar */
+.avatar-wrapper {
+  margin-bottom: 1.25rem;
+}
+
+.avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #DFE6E9, #B2BEC3);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2D3436;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.sidebar-tagline {
+  font-size: 0.9rem;
+  color: #636E72;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-links a {
+  color: #636E72;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.social-links a:hover {
+  color: #6C5CE7;
+  transform: translateY(-2px);
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.15);
+}
+
+/* Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar-nav a {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: #2D3436;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(108, 92, 231, 0.08);
+  color: #6C5CE7;
+}
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background: #6C5CE7;
+  color: #fff !important;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resume-btn:hover {
+  background: #5A4BD1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(108, 92, 231, 0.3);
+}
+
+/* ========================================
+   Main Content
+   ======================================== */
+
+.main-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  max-width: 960px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2D3436;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #6C5CE7;
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+/* About */
+.about-text {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   Project Cards
+   ======================================== */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #EDEAE5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2D3436;
+}
+
+.project-desc {
+  font-size: 0.9rem;
+  color: #636E72;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: #F0EDFA;
+  color: #6C5CE7;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.project-link {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #6C5CE7;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.project-note {
+  font-size: 0.82rem;
+  color: #999;
+  font-style: italic;
+}
+
+/* ========================================
+   Blog Cards & List
+   ======================================== */
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-card {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #EDEAE5;
+  color: #2D3436;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  color: #2D3436;
+}
+
+.blog-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.blog-card-date {
+  font-size: 0.82rem;
+  color: #999;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-excerpt {
+  font-size: 0.88rem;
+  color: #636E72;
+  line-height: 1.5;
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Blog listing page */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-list-item {
+  display: block;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #EDEAE5;
+  color: #2D3436;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  color: #2D3436;
+}
+
+.blog-list-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.blog-list-item time {
+  font-size: 0.82rem;
+  color: #999;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.blog-list-item p {
+  font-size: 0.9rem;
+  color: #636E72;
+}
+
+.empty-state {
+  color: #999;
+  font-style: italic;
+}
+
+/* ========================================
+   Blog Post (single)
+   ======================================== */
+
+.blog-post {
+  max-width: 720px;
+}
+
+.post-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #999;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.post-content h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: #2D3436;
+}
+
+.post-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+
+.post-content ul, .post-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.4rem;
+}
+
+.post-content code {
+  background: #F0EDFA;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.post-content pre {
+  background: #2D3436;
+  color: #DFE6E9;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.post-content strong {
+  font-weight: 600;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 3rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   Contact
+   ======================================== */
+
+.contact-text {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 1.25rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #636E72;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #6C5CE7;
+}
+
+.contact-link svg {
+  flex-shrink: 0;
+}
+
+/* ========================================
+   Mobile Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+  .site-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #E8E5E0;
+  }
+
+  .sidebar-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .avatar-placeholder {
+    width: 90px;
+    height: 90px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+
+  .sidebar-nav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.88rem;
+  }
+
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-header h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .sidebar-content {
+    padding: 1.5rem 1rem;
+  }
+}
