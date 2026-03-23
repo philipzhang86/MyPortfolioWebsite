@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Multithreaded File Server & Client",
+    "description": "Concurrent file server in C that handles parallel client requests under load. Thread-pool with back-pressure control, hardened TCP/IP parsing, and full memory/concurrency validation via GDB and Valgrind.",
+    "tags": [
+      "C",
+      "POSIX",
+      "TCP/IP",
+      "GDB",
+      "Valgrind"
+    ],
+    "link": null,
+    "note": "GT coursework — architecture writeup available"
+  },
+  {
+    "title": "Distributed File System",
+    "description": "Multi-client file system in C++14 supporting concurrent store, fetch, and delete over gRPC. Features write-lock coordination and a self-syncing cache layer that detects local file changes automatically.",
+    "tags": [
+      "C++14",
+      "gRPC",
+      "Distributed Systems",
+      "inotify"
+    ],
+    "link": null,
+    "note": "GT coursework — architecture writeup available"
+  },
+  {
+    "title": "CV Insect Detection Pipeline",
+    "description": "End-to-end inference pipeline that detects and classifies insects in real-world images. Fine-tuned pre-trained deep learning models and optimized precision/recall trade-offs for production-grade accuracy.",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "link": "https://github.com/philipzhang86",
+    "note": null
+  },
+  {
+    "title": "HAO Brands Backend",
+    "description": "Backend services powering a live e-commerce platform. Cut API latency by 90% (3s to 300ms) with Redis caching and Kafka decoupling; Dockerized deployment with automated CI/CD.",
+    "tags": [
+      "Microservices",
+      "Docker",
+      "CI/CD",
+      "API Design"
+    ],
+    "link": null,
+    "note": "Proprietary — no source code available"
+  }
+]
