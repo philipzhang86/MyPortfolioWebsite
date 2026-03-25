@@ -217,6 +217,23 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.about-tag {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  color: #6C5CE7;
+  background: rgba(108, 92, 231, 0.08);
+  border-radius: 20px;
+  font-weight: 500;
+}
+
 /* ========================================
    Project Cards
    ======================================== */

@@ -5,6 +5,6 @@
 
 
 # Project Requirements
-1. Carfully review the portfolio_website_project_reference.md in Materials direactory. It has nessary context for this project.
+1. Carfully review the portfolio_website_project_reference.md & deployment_status in Materials direactory. It has nessary context for this project.
 2. This is my first time to use Claude Code, if you have any suggestions that enhance my using experience, please let me know.
 3. The github repository for this project: git@github.com:philipzhang86/MyPortfolioWebsite.git

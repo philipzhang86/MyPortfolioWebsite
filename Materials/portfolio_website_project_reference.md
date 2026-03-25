@@ -23,7 +23,7 @@
 | **Domain** | `philipzhang.dev` or `zhipengzhang.dev` (check availability) | `.dev` TLD signals software engineer. ~$12/year. |
 | **Registrar** | Namecheap, Cloudflare, or Google Domains | Buy domain here, point DNS to Vercel. |
 | **Hosting** | Vercel (free tier) | Zero cost, auto-deploys from GitHub, handles HTTPS automatically. |
-| **Framework** | Static site generator (Hugo or 11ty) | Blog requires Markdown-to-HTML rendering at build time. SSG handles this automatically. Still outputs plain static files — no runtime server needed. |
+| **Framework** | 11ty (Eleventy) | Chosen over Hugo — more intuitive template syntax (Nunjucks), easier to customize. Outputs plain static files. |
 | **Repo** | Public GitHub repo | The site itself becomes a portfolio artifact (recruiters can see your code). |
 
 ### Why Own Domain + Vercel (Not Just Vercel Free URL)?
@@ -48,7 +48,7 @@ Inspired by 月球大叔's portfolio template on Rednote. The layout uses a **fi
 
 ### Blog Feature (Decided: In MVP, Markdown-based)
 
-Blog is a core feature from day one. Write posts as `.md` files in a `/blog` or `/posts` directory → `git push` → SSG (Hugo or 11ty) converts Markdown to HTML during build → Vercel auto-deploys. This is the standard approach for developer blogs (Approach 2: Static Site Generator).
+Blog is a core feature from day one. Write posts as `.md` files in `src/blog/` → `git push` → 11ty converts Markdown to HTML during build → Vercel auto-deploys.
 
 Blog posts will appear as thumbnail cards in the main content area, linking to individual post pages generated from Markdown files.
 
@@ -62,7 +62,7 @@ A clean single-page site with:
 
 - **About Me** — brief intro, your positioning (backend + systems + AI engineering), MSCS @ Georgia Tech in progress.
 - **Projects section** — each project gets a card with title, short description, tech stack tags, and link to GitHub repo.
-- **Blog section** — Markdown-based blog with SSG (Hugo or 11ty). Write `.md` files, auto-rendered to HTML on deploy.
+- **Blog section** — Markdown-based blog with 11ty. Write `.md` files in `src/blog/`, auto-rendered to HTML on deploy.
 - **Resume** — PDF download link.
 - **Links** — GitHub, LinkedIn, email.
 - **Mobile responsive** — must work on phone screens.
@@ -106,18 +106,24 @@ The site grows as you complete projects:
 
 1. Used 月球大叔's Rednote portfolio as layout reference.
 2. Fed the screenshot + project reference to Claude. Generated an initial `index.html` with sidebar + card grid layout as a design prototype.
-3. **Next steps:** Set up SSG (Hugo or 11ty) with the sidebar + card grid layout, configure Markdown blog pipeline, customize URLs/links/email, add resume PDF, push to GitHub, connect to Vercel, connect custom domain.
-4. Done. Move on to job applications.
+3. Compared Hugo vs 11ty — chose 11ty for simpler template syntax.
+4. Built full site: sidebar layout, project cards (data-driven from `projects.json`), tech stack badges, Markdown blog pipeline, mobile responsive breakpoints.
+5. Pushed to GitHub (`eleventy-skills-main` branch).
+6. Deployed to Vercel — live at `my-portfolio-website-liart-gamma.vercel.app`.
+7. Next: purchase custom domain, replace placeholder content (avatar, resume PDF, email), continue refining.
 
 ---
 
-## 6. Still To Be Decided (Future Session)
+## 6. Still To Be Decided / Done
 
 - [ ] Check domain name availability (`philipzhang.dev`, alternatives)
-- [x] Sidebar + main content layout, using SSG (Hugo or 11ty)
+- [ ] Purchase domain and connect to Vercel
+- [x] Sidebar + main content layout, using SSG
 - [x] Sidebar (profile) | Main (About → Projects → Blog → Footer)
 - [x] Blog in MVP, Markdown-based via SSG
-- [x] Bilingual support (English primary, Chinese optional)
-- [ ] Choose SSG: Hugo vs 11ty (to be decided before build starts)
-
-- [ ] SEO basics (meta tags, Open Graph for link previews) — basic meta tags already in the HTML scaffold
+- [x] Bilingual support decision — English only
+- [x] Choose SSG: 11ty (Eleventy) chosen over Hugo
+- [x] Deploy to Vercel — live at `my-portfolio-website-liart-gamma.vercel.app`
+- [ ] Replace placeholder avatar, resume PDF, email address
+- [ ] SEO basics (meta tags, Open Graph for link previews) — basic meta tags already in place
+- [ ] Merge `eleventy-skills-main` into `main` when finalized

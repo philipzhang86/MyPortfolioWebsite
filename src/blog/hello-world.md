@@ -1,22 +1,11 @@
 ---
-title: "Building My Portfolio Site"
-date: 2026-03-22
-excerpt: "How I set up a static portfolio site in a weekend using a static site generator."
+title: "Coming Soon"
+date: 2026-03-24
+excerpt: "I'm building out this blog to write about systems engineering, distributed infrastructure, and applied AI."
 ---
 
-Welcome to my blog! This is my first post on my new portfolio site.
+I'm building out this blog to write about systems engineering, distributed infrastructure, and applied AI.
 
-## Why a Static Site?
+Topics I plan to cover: production war stories, architecture decisions behind my projects, and lessons from building AI agents with real-world constraints.
 
-Static sites are fast, secure, and easy to deploy. For a developer portfolio, they're the perfect choice:
-
-- **Speed**: Static HTML loads instantly — no server-side rendering or database queries.
-- **Security**: No backend means no attack surface.
-- **Cost**: Free hosting on platforms like Vercel or Netlify.
-- **Simplicity**: Write content in Markdown, push to GitHub, and it's live.
-
-## What's Next
-
-I'll be writing about systems programming, distributed systems, and AI/ML engineering as I work through my MSCS at Georgia Tech and build side projects.
-
-Stay tuned!
+First real post dropping soon.

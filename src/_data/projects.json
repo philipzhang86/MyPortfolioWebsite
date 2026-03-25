@@ -9,7 +9,7 @@
       "GDB",
       "Valgrind"
     ],
-    "link": null,
+    "link": "https://github.com/philipzhang86/Gios-pr1-multithreaded-file-server",
     "note": "GT coursework — architecture writeup available"
   },
   {
@@ -21,7 +21,7 @@
       "Distributed Systems",
       "inotify"
     ],
-    "link": null,
+    "link": "https://github.com/philipzhang86/Gios-pr4-distributed-file-system",
     "note": "GT coursework — architecture writeup available"
   },
   {
