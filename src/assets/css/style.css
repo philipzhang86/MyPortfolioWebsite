@@ -71,13 +71,15 @@ a:hover {
   margin-bottom: 1.25rem;
 }
 
-.avatar-placeholder {
-  width: 120px;
-  height: 120px;
+.avatar {
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #DFE6E9, #B2BEC3);
+  object-fit: cover;
+  object-position: center 20%;
   border: 3px solid #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: block;
 }
 
 .sidebar-name {
@@ -610,7 +612,7 @@ a:hover {
     padding: 2rem 1.5rem;
   }
 
-  .avatar-placeholder {
+  .avatar {
     width: 90px;
     height: 90px;
   }
